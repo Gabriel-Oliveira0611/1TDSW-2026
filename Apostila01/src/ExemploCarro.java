@@ -5,7 +5,7 @@ public class ExemploCarro {
 
         Carro gol = new Carro();
 
-        //Colocar valores nos atributor do objeto
+        //Colocar valores nos atributo do objeto
         gol.cor = "Prata";
         gol.velocidadeMaxima = 190;
         gol.ano = 2010;
