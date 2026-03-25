@@ -19,9 +19,13 @@ public class ExemploEntradaDados {
         double finalCP = 0;
         double finalGS = 0;
         double notaFinal = 0;
+        String nomeAluno = "";
 
         //Criar o objeto para ler o teclado
         Scanner leitor = new Scanner(System.in);
+
+        System.out.println("Qual é o seu nome?");
+        nomeAluno = leitor.next() + leitor.nextLine();
 
         System.out.println("Digite a nota da CP1");
         double cp1 = leitor.nextDouble();
@@ -48,6 +52,7 @@ public class ExemploEntradaDados {
 
         notaFinal = finalCP + finalChallenge + finalGS;
 
+        System.out.println(nomeAluno + ", seu resultado é: ");
         System.out.println("A média dos checkpoints é " + mediaCheckPoints);
         System.out.println("A média dos Challenges é " + mediaChallenge);
         System.out.println("A nota do Global Solution é " + notaGlobalSolution);
