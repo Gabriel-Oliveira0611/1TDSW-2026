@@ -9,4 +9,13 @@ public class Produto {
     public boolean disponivel;
     public Fornecedor fornecedor;
 
+    // Métodos
+    public double calcularDesconto(){
+        double desconto = preco * 0.2;
+        return desconto;
+    }
+
+    public void aumentarPreco(double porcentagem){
+        preco += preco * porcentagem /100;
+    }
 }

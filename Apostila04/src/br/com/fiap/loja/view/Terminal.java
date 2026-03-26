@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Terminal {
 
-    static void main() {
+    public static void main(String[]args) {
         // Criação da função de leitura de dados
         Scanner leitor = new Scanner(System.in);
 
@@ -66,25 +66,43 @@ public class Terminal {
         // Exibição dos dados:
 
         System.out.println(
-                "CNPJ do fornecedor: " + cnpj
+                "CNPJ do fornecedor: " + camisa.fornecedor.cnpj
         );
         System.out.println(
-                "Telefone do fornecedor: " + telefone
+                "Telefone do fornecedor: " + camisa.fornecedor.telefone
         );
         System.out.println(
-                "Nome do produto: " + nome
+                "Nome do produto: " + camisa.nome
         );
         System.out.println(
-                "Código do produto: " + codigo
+                "Código do produto: " + camisa.codigo
         );
         System.out.println(
-                "Preço do produto: " + preco
+                "Preço do produto: " + camisa.preco
         );
         System.out.println(
-                "Está disponível? " + disponivel
+                "Está disponível? " + camisa.disponivel
         );
 
+
+        double promocao = camisa.calcularDesconto();
+        System.out.println(
+                "Desconto: R$ " + promocao
+        );
+
+        System.out.println(
+                "Qual a porcentagem de aumento?"
+        );
+        double porcentagem = leitor.nextDouble();
+
+        camisa.aumentarPreco(porcentagem);
+
+        System.out.println(
+                "Novo preço: " + camisa.preco
+        );
+
+        // Criar um método para calcular o valor total da compra
+        // Dado a quantidade, calcular o valor da compra
 
     }
-
 }
